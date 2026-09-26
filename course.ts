@@ -7,7 +7,7 @@ const courseData: CourseManifest = {
   longDescription:
     "A course for learning about landmark trials in pulmonary & critical care.",
   image: "images/thoughtful-pulm-crit.svg",
-  units: ["landmark-trials", "severe-ards"],
+  units: ["landmark-trials", "surgery-for-ich"],
 };
 
 export default courseData;
