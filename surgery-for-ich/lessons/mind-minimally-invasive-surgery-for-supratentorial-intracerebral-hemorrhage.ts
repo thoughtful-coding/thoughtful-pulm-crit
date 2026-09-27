@@ -54,11 +54,11 @@ const lessonData: Lesson = {
       id: "multiplechoice-exc-protocol-b" as SectionId,
       title: "Who Was Enrolled (3)",
       content: [
-    { kind: "text", value: "Partway through MIND, Protocol B added new exclusion criteria that removed certain patients from eligibility. Which of the following was one of those Protocol B exclusions, rather than an inclusion threshold that a patient had to meet to enter the trial?" },
+    { kind: "text", value: "Partway through MIND, Protocol B added new exclusion criteria. Which of the following was one of those Protocol B exclusions, rather than one of the trial's inclusion thresholds?" },
   ],
-      options: [{ text: "Presenting with primary thalamic intracerebral hemorrhage", feedback: "Correct. Under Protocol B, patients with severe active infection, kidney failure, direct factor Xa inhibitor use, or primary thalamic ICH were excluded." }, { text: "Having a baseline NIHSS score of 6 or higher", feedback: "This is a true inclusion threshold, not a Protocol B exclusion: entry required a baseline NIHSS of 6 or higher." }, { text: "Having a hematoma volume of 20 to 80 mL", feedback: "This is a true inclusion threshold, not a Protocol B exclusion: eligible patients had a hematoma volume of 20 to 80 mL." }],
+      options: [{ text: "Primary thalamic hemorrhage", feedback: "Correct. Under Protocol B the trial added exclusions for severe active infection, kidney failure, patients on direct factor Xa inhibitors, and primary thalamic hemorrhage — a location the endoscopic approach is poorly suited to reach." }, { text: "Age outside 18 to 80 years", feedback: "This is the age inclusion range (18 to 80 years), an entry threshold rather than a Protocol B exclusion." }, { text: "Baseline NIHSS score below 6", feedback: "This describes the inclusion threshold (NIHSS of 6 or higher required for entry), not a Protocol B exclusion." }],
       correctAnswer: 0,
-      feedback: { correct: "Correct. Under Protocol B, patients with severe active infection, kidney failure, direct factor Xa inhibitor use, or primary thalamic ICH were excluded.\n\n> _Source:_ “Protocol B removed this requirement …” — Methods, p. 2, ¶6" },
+      feedback: { correct: "Correct. Under Protocol B the trial added exclusions for severe active infection, kidney failure, patients on direct factor Xa inhibitors, and primary thalamic hemorrhage — a location the endoscopic approach is poorly suited to reach.\n\n> _Source:_ “Protocol B removed this requirement …” — Methods, p. 2, ¶6" },
     },
     {
       kind: "FillIn",
@@ -103,20 +103,30 @@ const lessonData: Lesson = {
       id: "multiplechoice-out-primary-mrs-180" as SectionId,
       title: "The Result (2)",
       content: [
-    { kind: "text", value: "The trial's primary efficacy endpoint was the ordinal modified Rankin Scale (mRS) at 180 days in the unadjusted intention-to-treat population, comparing minimally invasive surgery with medical management alone. Given that surgery achieved near-complete hematoma evacuation, which result should you predict for this primary 180-day ordinal mRS comparison?" },
+    { kind: "text", value: "The Artemis procedure achieved near-complete evacuation, reducing median clot volume by roughly four-fifths. Before the durable results are revealed, predict what the trial's primary efficacy analysis — the ordinal modified Rankin Scale distribution at 180 days in the unadjusted intention-to-treat population — most plausibly showed when comparing minimally invasive surgery with medical management alone:" },
   ],
-      options: [{ text: "A difference of -5.1% (95% CI, -16.1% to 4.5%) favoring surgery, but not statistically significant", feedback: "This is the 180-day all-cause mortality difference, a different endpoint than the ordinal mRS primary analysis the stem asks about." }, { text: "OR 1.03 (96% CI, 0.62-1.72; P = .45), with no statistically significant difference between the arms", feedback: "Correct. On the primary analysis the ordinal mRS distribution at 180 days was essentially superimposable between arms (OR 1.03; 96% CI 0.62-1.72; P = .45): the decisive anatomic success did not translate into a functional benefit." }, { text: "OR 4.23 (95% CI, 2.36-7.57), a statistically significant shift favoring surgery", feedback: "This is the exploratory 30-day ordinal mRS result (per-protocol, adjusted for strata), not the 180-day primary endpoint; that early advantage did not persist at 90 and 180 days." }],
-      correctAnswer: 1,
-      feedback: { correct: "Correct. On the primary analysis the ordinal mRS distribution at 180 days was essentially superimposable between arms (OR 1.03; 96% CI 0.62-1.72; P = .45): the decisive anatomic success did not translate into a functional benefit.\n\n> _Source:_ “No statistically significant difference in …” — Results, p. 6, ¶5" },
+      options: [{ text: "A large favorable shift in the ordinal mRS distribution for surgery (OR 4.23; 95% CI, 2.36-7.57)", feedback: "This OR 4.23 (95% CI, 2.36-7.57) is the exploratory 30-day ordinal mRS result, not the primary 180-day analysis; that early advantage did not persist to the primary endpoint." }, { text: "A significant favorable shift in the ordinal mRS distribution for surgery (OR 1.03; 95% CI, 0.58-1.84)", feedback: "The OR 1.03 (95% CI, 0.58-1.84) belongs to the dichotomized 180-day mRS ≤3 comparison, which was not significant; its interval crosses 1, so it cannot represent a significant benefit." }, { text: "No significant difference in the ordinal mRS distribution (OR 1.03; 96% CI, 0.62-1.72; P = .45)", feedback: "Correct. Despite decisive anatomic evacuation, the primary ordinal mRS analysis at 180 days was flat: OR 1.03 (96% CI, 0.62-1.72; P = .45). The surrogate moved; the functional distribution did not." }],
+      correctAnswer: 2,
+      feedback: { correct: "Correct. Despite decisive anatomic evacuation, the primary ordinal mRS analysis at 180 days was flat: OR 1.03 (96% CI, 0.62-1.72; P = .45). The surrogate moved; the functional distribution did not.\n\n> _Source:_ “No statistically significant difference in …” — Results, p. 6, ¶5" },
     },
     {
       kind: "Information",
       id: "b10-reveal" as SectionId,
       title: "What the Trial Found (2)",
       content: [
-    { kind: "text", value: "The anatomic success did not translate. On the primary efficacy analysis — ordinal mRS at 180 days in the unadjusted ITT population — surgery was not superior to medical management (OR 1.03; 96% CI 0.62-1.72; P = .45). Read this as the inference the data support: despite reducing median clot volume by 80.7% to 6.3 mL and leaving nearly four in five surgical patients with 15 mL or less, the functional distribution at six months was essentially superimposable on medical management. The surrogate moved decisively; the outcome did not. That dissociation — a near-complete evacuation with a flat functional result — is the central finding, and it is what the rest of the lesson has to interpret rather than explain away." },
-    { kind: "text", value: "> _Source:_ “No statistically significant difference in …” — Results, p. 6, ¶5 ; “Following MIS, median (IQR) ICH …” — Results, p. 6, ¶3" },
+    { kind: "text", value: "The anatomic success did not translate. On the primary efficacy analysis — ordinal mRS at 180 days in the unadjusted ITT population — surgery was not superior to medical management (OR 1.03; 96% CI 0.62-1.72; P = .45). Read this as the inference the data support: despite reducing median clot volume by 80.7% to 6.3 mL and leaving nearly four in five surgical patients with 15 mL or less, the functional distribution at six months was essentially superimposable on medical management. The surrogate moved decisively; the outcome did not. That dissociation — a near-complete evacuation with a flat functional result — is the central finding, and it is what the rest of the lesson has to interpret rather than explain away. The utility-weighted modified Rankin Scale at 180 days told the same story: 0.41 in the minimally invasive surgery group and 0.38 in the medical management group, a nonsignificant difference of 0.04 (95% CI, -0.04 to 0.12)." },
+    { kind: "text", value: "> _Source:_ “No statistically significant difference in …” — Results, p. 6, ¶5 ; “Following MIS, median (IQR) ICH …” — Results, p. 6, ¶3 ; “The utility-weighted mRS14 scores at …” — Results, p. 6, ¶6" },
   ],
+    },
+    {
+      kind: "FillIn",
+      id: "fillin-out-uwmrs" as SectionId,
+      title: "The Result (3)",
+      content: [
+    { kind: "text", value: "At 180 days, the utility-weighted modified Rankin Scale score was ___ in the minimally invasive surgery group and ___ in the medical management group — a nonsignificant difference." },
+  ],
+      body: "At 180 days, the utility-weighted modified Rankin Scale score was {{mis}} in the minimally invasive surgery group and {{mm}} in the medical management group — a nonsignificant difference.",
+      blanks: { "mis": { match: "numeric", answer: 0.41, tolerance: 0.005, hintMode: "highLow" }, "mm": { match: "numeric", answer: 0.38, tolerance: 0.005, hintMode: "highLow" } },
     },
     {
       kind: "Information",
@@ -132,9 +142,9 @@ const lessonData: Lesson = {
       id: "multiplechoice-out-180d-mortality" as SectionId,
       title: "The Result (4)",
       content: [
-    { kind: "text", value: "In MIND, considering the all-cause mortality endpoint at 180 days, how did minimally invasive surgery compare with medical management alone?" },
+    { kind: "text", value: "Considering the all-cause mortality endpoint at 180 days in MIND, how did the minimally invasive surgery arm compare with the medical management arm?" },
   ],
-      options: [{ text: "36.8% vs 37.2%; OR 1.03 (95% CI, 0.58-1.84), not significant", feedback: "This is the dichotomized 180-day mRS ≤3 result, a functional endpoint, not all-cause mortality." }, { text: "13.2% vs 18.3%; difference -5.1% (95% CI, -16.1% to 4.5%), not significant", feedback: "Correct. At 180 days, 20 of 152 surgical patients (13.2%) died versus 15 of 82 medical-management patients (18.3%), a nonsignificant difference of -5.1% (95% CI, -16.1% to 4.5%)." }, { text: "16.7% vs 16.7%; OR 1.05 (95% CI, 0.49-2.22), not significant", feedback: "This is the dichotomized 180-day mRS ≤2 result, a functional endpoint, not all-cause mortality." }],
+      options: [{ text: "36.8% vs 37.2%, a nonsignificant difference (OR 1.03; 95% CI, 0.58-1.84)", feedback: "These figures are the dichotomized 180-day mRS 3-or-lower rates (53/144 vs 29/78), not all-cause mortality." }, { text: "13.2% vs 18.3%, a nonsignificant difference (95% CI, -16.1% to 4.5%)", feedback: "Correct. At 180 days, 20 of 152 surgical patients (13.2%) died versus 15 of 82 medical-management patients (18.3%), a nonsignificant difference of -5.1% (95% CI, -16.1% to 4.5%)." }, { text: "16.7% vs 16.7%, a nonsignificant difference (OR 1.05; 95% CI, 0.49-2.22)", feedback: "These are the dichotomized 180-day mRS 2-or-less rates (24/144 vs 13/78), not the mortality endpoint the stem names." }],
       correctAnswer: 1,
       feedback: { correct: "Correct. At 180 days, 20 of 152 surgical patients (13.2%) died versus 15 of 82 medical-management patients (18.3%), a nonsignificant difference of -5.1% (95% CI, -16.1% to 4.5%).\n\n> _Source:_ “At 180 days, 20 of …” — Results, p. 7, ¶2" },
     },
@@ -143,11 +153,11 @@ const lessonData: Lesson = {
       id: "multiplechoice-out-exploratory-mrs-30d" as SectionId,
       title: "The Result (5)",
       content: [
-    { kind: "text", value: "The trial ran an exploratory analysis of ordinal modified Rankin Scale at 30 days (per-protocol, adjusted for strata), separate from the 180-day primary endpoint. Which result should you predict for this early 30-day ordinal mRS comparison of minimally invasive surgery versus medical management?" },
+    { kind: "text", value: "The procedure achieved near-complete evacuation, but before the durable functional results are read out, consider the exploratory ordinal mRS analysis at 30 days. Which result did that early, unblinded analysis most plausibly show?" },
   ],
-      options: [{ text: "OR 1.03 (95% CI, 0.58-1.84), with no significant difference between arms", feedback: "This is the dichotomized mRS 3-or-lower result at 180 days, not the 30-day exploratory ordinal analysis." }, { text: "OR 4.23 (95% CI, 2.36-7.57), favoring surgery, but not durable at 90 and 180 days", feedback: "Correct. The exploratory 30-day ordinal mRS showed a large apparent advantage for surgery (OR 4.23; 95% CI, 2.36-7.57) that was no longer present at 90- and 180-day follow-up." }, { text: "OR 1.03 (96% CI, 0.62-1.72; P = .45), with no significant difference between arms", feedback: "This is the 180-day primary ordinal mRS result, not the exploratory 30-day analysis." }],
-      correctAnswer: 1,
-      feedback: { correct: "Correct. The exploratory 30-day ordinal mRS showed a large apparent advantage for surgery (OR 4.23; 95% CI, 2.36-7.57) that was no longer present at 90- and 180-day follow-up.\n\n> _Source:_ “An exploratory analysis of ordinal …” — Results, p. 7, ¶4" },
+      options: [{ text: "A large early advantage (OR 4.23) that did not persist at later timepoints", feedback: "Correct. The exploratory 30-day ordinal mRS favored surgery (OR 4.23; 95% CI 2.36-7.57), but this benefit was gone by 90 and 180 days." }, { text: "An equal dichotomized rate of 16.7% reaching mRS of 2 or less by arm", feedback: "This is the dichotomized 180-day mRS ≤2 outcome, not the exploratory ordinal mRS at 30 days." }, { text: "A lower mortality of 13.2% vs 18.3% that was not statistically significant", feedback: "This is the 180-day mortality comparison, a different endpoint, not the ordinal mRS at 30 days." }],
+      correctAnswer: 0,
+      feedback: { correct: "Correct. The exploratory 30-day ordinal mRS favored surgery (OR 4.23; 95% CI 2.36-7.57), but this benefit was gone by 90 and 180 days.\n\n> _Source:_ “An exploratory analysis of ordinal …” — Results, p. 7, ¶4" },
     },
     {
       kind: "Information",
@@ -157,6 +167,16 @@ const lessonData: Lesson = {
     { kind: "text", value: "There was one place the data looked different. In an exploratory analysis of ordinal mRS at 30 days (per-protocol, adjusted for strata), surgery was associated with markedly improved outcomes (OR 4.23; 95% CI 2.36-7.57) — but the benefit was no longer present at 90 and 180 days. Treat this as a signal to interpret, not a finding to bank: it came from an exploratory analysis not adjusted for multiplicity, and the 30-day assessment was performed unblinded, whereas only the 180-day mRS used a blinded assessor. The distributional driver of the early shift — which mRS categories moved — is not established by the reported facts. What the pattern implies is an early, possibly real, possibly artefactual advantage that dissolved by the time the outcome that mattered was measured under blinding." },
     { kind: "text", value: "> _Source:_ “An exploratory analysis of ordinal …” — Results, p. 7, ¶4 ; “The interval widths for the …” — Methods, p. 3, ¶4 ; “evaluators performing the 180-day mRS …” — Discussion, p. 8, ¶6" },
   ],
+    },
+    {
+      kind: "FillIn",
+      id: "fillin-out-exploratory-mrs-30d" as SectionId,
+      title: "The Result (6)",
+      content: [
+    { kind: "text", value: "In the exploratory analysis of ordinal mRS at 30 days, minimally invasive surgery was associated with improved outcomes (OR ___; 95% CI 2.36-7.57), but this benefit was no longer observed at 90 and ___ days." },
+  ],
+      body: "In the exploratory analysis of ordinal mRS at 30 days, minimally invasive surgery was associated with improved outcomes (OR {{or}}; 95% CI 2.36-7.57), but this benefit was no longer observed at 90 and {{later}} days.",
+      blanks: { "or": { match: "numeric", answer: 4.23, tolerance: 0.05, hintMode: "highLow" }, "later": { match: "numeric", answer: 180.0, tolerance: 0.5, unit: "days", hintMode: "highLow" } },
     },
     {
       kind: "Information",
